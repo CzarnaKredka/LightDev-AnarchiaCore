@@ -1,0 +1,4 @@
+name: LightDev-AnarchiaCore
+version: '1.0-SNAPSHOT'
+main: dev.lightdev.LightPlugin
+api-version: '1.20'
