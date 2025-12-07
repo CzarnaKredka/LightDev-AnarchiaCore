@@ -26,7 +26,7 @@ public class MenusConfig extends OkaeriConfig {
                     new MenuDecoration(1, ChatUtil.fixColor("&r"), Material.RED_STAINED_GLASS_PANE, List.of(0, 8, 45, 53)),
                     new MenuDecoration(2, ChatUtil.fixColor("&r"), Material.GRAY_STAINED_GLASS_PANE, List.of(1, 7, 9, 17, 36, 44, 46, 52)),
                     new MenuDecoration(3, ChatUtil.fixColor("&r"), Material.WHITE_STAINED_GLASS_PANE, List.of(2, 3, 5, 6, 47, 48, 50, 51)),
-                    new MenuDecoration(4, ChatUtil.fixColor("&r"), Material.IRON_CHAIN, List.of(18, 26, 27, 35)),
+                    new MenuDecoration(4, ChatUtil.fixColor("&r"), Material.CHAIN, List.of(18, 26, 27, 35)),
                     new MenuDecoration(5, ChatUtil.fixColor("&r"), Material.SHROOMLIGHT, List.of(4))
             )
     );
