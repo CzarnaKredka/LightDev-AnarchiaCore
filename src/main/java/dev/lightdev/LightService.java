@@ -11,6 +11,10 @@ import dev.lightdev.commands.user.WorkBenchCommand;
 import dev.lightdev.config.MenusConfig;
 import dev.lightdev.config.MessageConfig;
 import dev.lightdev.config.PluginConfig;
+import dev.lightdev.listeners.PlayerInteractListener;
+import dev.lightdev.listeners.PlayerJoinListener;
+import dev.lightdev.listeners.PlayerKillListener;
+import dev.lightdev.listeners.PlayerQuitListener;
 import dev.lightdev.managers.ChatManager;
 import dev.lightdev.utils.string.ChatUtil;
 import dev.rollczi.litecommands.bukkit.LiteBukkitFactory;
@@ -30,12 +34,28 @@ public class LightService {
         this.menusConfig = menusConfig;
         this.chatManager = chatManager;
 
-        // Implementation of core events in lobby:
+        // Implementation of core events:
+
+        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
+                new PlayerInteractListener(),
+                LightPlugin.getPlugin()
+        );
+        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
+                new PlayerJoinListener(this.messageConfig),
+                LightPlugin.getPlugin()
+        );
+        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
+                new PlayerQuitListener(this.messageConfig),
+                LightPlugin.getPlugin()
+        );
+        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
+                new PlayerKillListener(this.messageConfig, this.pluginConfig),
+                LightPlugin.getPlugin()
+        );
 
 
 
-
-        // Implementation of core commands in lobby:
+        // Implementation of core commands:
 
         LiteBukkitFactory.builder("lightdev")
                 .commands(

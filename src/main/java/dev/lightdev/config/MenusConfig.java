@@ -4,15 +4,20 @@ package dev.lightdev.config;
 import dev.lightdev.config.customitem.MenuDecoration;
 import dev.lightdev.config.customitem.MenuItems;
 import dev.lightdev.config.customitem.MenusSetup;
+import dev.lightdev.config.pass.PassItems;
 import dev.lightdev.utils.ItemUtil;
 import dev.lightdev.utils.string.ChatUtil;
 import eu.okaeri.configs.OkaeriConfig;
 import eu.okaeri.configs.annotation.Comment;
 import eu.okaeri.platform.core.annotation.Configuration;
 import org.bukkit.Material;
+import org.bukkit.entity.Item;
 
+import javax.swing.plaf.MenuItemUI;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 @Configuration(path = "menus.yml")
 public class MenusConfig extends OkaeriConfig {
@@ -30,46 +35,19 @@ public class MenusConfig extends OkaeriConfig {
                     new MenuDecoration(5, ChatUtil.fixColor("&r"), Material.SHROOMLIGHT, List.of(4))
             )
     );
-    public MenuItems warpBezpieczna = new MenuItems(ItemUtil.of(Material.DIAMOND_PICKAXE)
-            .setName(ChatUtil.fixColor("&#68FF48&lꜱ&#70FF4E&lᴛ&#77FF53&lʀ&#7FFF59&lᴇ&#87FF5F&lꜰ&#8EFF64&lᴀ &#9DFF6F&lʙ&#A5FF75&lᴇ&#9DFF6F&lᴢ&#96FF6A&lᴘ&#8EFF64&lɪ&#87FF5F&lᴇ&#7FFF59&lᴄ&#77FF53&lᴢ&#70FF4E&lɴ&#68FF48&lᴀ"))
-            .setLore(ChatUtil.fixLore(Arrays.asList(
-                    "",
-                    " &8● &fKliknij, aby się &#A5FF75przeteleportować!"
-            )))
-            .toItemStack(),
-            21,
-            0
-    );
-    public MenuItems warpPvP = new MenuItems(ItemUtil.of(Material.NETHERITE_SWORD)
-            .setName(ChatUtil.fixColor("&#FF4848&lꜱ&#FF5151&lᴛ&#FF5A5A&lʀ&#FF6363&lᴇ&#FF6C6C&lꜰ&#FF7575&lᴀ &#FF5F5F&lᴘ&#FF5353&lᴠ&#FF4848&lᴘ"))
-            .setLore(ChatUtil.fixLore(Arrays.asList(
-                    "",
-                    " &8● &fKliknij, aby się &#FF7575przeteleportować!"
-            )))
-            .toItemStack(),
-            22,
-            0
-    );
-    public MenuItems warpAfk = new MenuItems(ItemUtil.of(Material.CLOCK)
-            .setName(ChatUtil.fixColor("&#48FFFF&lꜱ&#59FFFD&lᴛ&#6AFFFB&lʀ&#7AFFFA&lᴇ&#8BFFF8&lꜰ&#9CFFF6&lᴀ &#72FFFB&lᴀ&#5DFFFD&lꜰ&#48FFFF&lᴋ"))
-            .setLore(ChatUtil.fixLore(Arrays.asList(
-                    "",
-                    " &8● &fKliknij, aby się &#9CFFF6przeteleportować!"
-            )))
-            .toItemStack(),
-            23,
-            0
-    );
-    public MenuItems warpSkrzynki = new MenuItems(ItemUtil.of(Material.CLOCK)
-            .setName(ChatUtil.fixColor("&#FF7C48&lꜱ&#FF844F&lᴛ&#FF8B55&lʀ&#FF935C&lᴇ&#FF9B63&lꜰ&#FFA36A&lᴀ &#FFB277&lꜱ&#FFAA70&lᴋ&#FFA36A&lʀ&#FF9B63&lᴢ&#FF935C&lʏ&#FF8B55&lɴ&#FF844F&lᴇ&#FF7C48&lᴋ"))
-            .setLore(ChatUtil.fixLore(Arrays.asList(
-                    "",
-                    " &8● &fKliknij, aby się &#FFB277przeteleportować!"
-            )))
-            .toItemStack(),
-            31,
-            0
-    );
-
-}
+    public Map<String, List<PassItems>> guiItemsPass = new LinkedHashMap<>() {{
+        put("item1", List.of(
+                new PassItems(ItemUtil.of(Material.ENCHANTED_GOLDEN_APPLE)
+                        .toItemStack(),
+                        1,
+                        1)
+        ));
+        put("item2", List.of(
+                new PassItems(ItemUtil.of(Material.GOLDEN_APPLE)
+                        .toItemStack(),
+                        1,
+                        2)
+        ));
+    }};
+    }
 
