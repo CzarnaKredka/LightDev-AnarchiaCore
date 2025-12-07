@@ -25,5 +25,7 @@ public class PlayerQuitListener implements Listener {
         for (Player online : Bukkit.getOnlinePlayers()) {
             this.messageConfig.onQuitPlayer.send(online, placeholders);
         }
+
+        e.setQuitMessage(null);
     }
 }

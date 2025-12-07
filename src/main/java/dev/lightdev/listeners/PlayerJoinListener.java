@@ -34,5 +34,7 @@ public class PlayerJoinListener implements Listener {
 
         player.setMaxHealth(60);
         player.setHealth(60);
+
+        e.setJoinMessage(null);
     }
 }
