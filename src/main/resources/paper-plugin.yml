@@ -2,3 +2,8 @@ name: LightDev-AnarchiaCore
 version: '1.0-SNAPSHOT'
 main: dev.lightdev.LightPlugin
 api-version: '1.20'
+authors:
+  - 'CzarnaKredka'
+  - 'Katix'
+description: 'Plugin stworzony przez oprogramowanie lightdev.pl'
+website: 'dc.lightdev.pl'

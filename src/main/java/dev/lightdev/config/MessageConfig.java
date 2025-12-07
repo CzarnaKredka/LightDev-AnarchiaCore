@@ -79,10 +79,4 @@ public class MessageConfig extends OkaeriConfig {
     public Message onClearChat = new Message(MessageType.CHAT, "&r\n    &#F8DE7E&lᴄ&#F8DE7E&lʜ&#F8DE7E&lᴀ&#F8DE7E&lᴛ &#F8DE7E&lᴡ&#F8DE7E&lʏ&#F8DE7E&lᴄ&#F8DE7E&lᴢ&#F8DE7E&lʏ&#F8DE7E&lꜱ&#F8DE7E&lᴢ&#F8DE7E&lᴄ&#F8DE7E&lᴢ&#F8DE7E&lᴏ&#F8DE7E&lɴ&#F8DE7E&lʏ\n&r\n&8&l⏵ &fAdministrator o nicku &c{PLAYER}\n&8&l⏵ &fPomyślnie &#ffae42wyczyścił &fchat!\n&r");
     public Message onEnableChat = new Message(MessageType.CHAT, "&r\n     &#F8DE7E&lᴄ&#F8DE7E&lʜ&#F8DE7E&lᴀ&#F8DE7E&lᴛ &#F8DE7E&lᴡ&#F8DE7E&lᴢ&#F8DE7E&lɴ&#F8DE7E&lᴏ&#F8DE7E&lᴡ&#F8DE7E&lɪ&#F8DE7E&lᴏ&#F8DE7E&lɴ&#F8DE7E&lʏ\n&r\n&8&l⏵ &fAdministrator o nicku &c{PLAYER}\n&8&l⏵ &fPomyślnie &#ffae42włączył &fchat!\n&r");
 
-    @Comment()
-    @Comment("Wiadomość przy wejściu w tryb pvp:")
-    public Message onStartJoiningPvP = new Message(MessageType.TITLE_SUBTITLE, "&#FFAE42&lᴍ&#FEB84E&lᴇ&#FCC15A&lᴛ&#FBCB66&lᴇ&#F9D472&lᴏ&#F8DE7E&lʀ&f&lᴅᴇᴠ%NOWA_LINIA%&8∙ &fPrzygotuj się do walki za &#ffae42{TIME}s! &8∙");
-    public Message onJoinPvP = new Message(MessageType.TITLE_SUBTITLE, "&#FFAE42&lᴍ&#FEB84E&lᴇ&#FCC15A&lᴛ&#FBCB66&lᴇ&#F9D472&lᴏ&#F8DE7E&lʀ&f&lᴅᴇᴠ%NOWA_LINIA%&8∙ &fPomyślnie &adołączyłeś &fdo &#ffae42walki! &8∙");
-    public Message onLeavePvP = new Message(MessageType.TITLE_SUBTITLE, "&#FFAE42&lᴍ&#FEB84E&lᴇ&#FCC15A&lᴛ&#FBCB66&lᴇ&#F9D472&lᴏ&#F8DE7E&lʀ&f&lᴅᴇᴠ%NOWA_LINIA%&8∙ &fPomyślnie &cwyszłeś &fz &#ffae42walki! &8∙");
-
 }

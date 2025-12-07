@@ -11,10 +11,6 @@ import dev.lightdev.commands.user.WorkBenchCommand;
 import dev.lightdev.config.MenusConfig;
 import dev.lightdev.config.MessageConfig;
 import dev.lightdev.config.PluginConfig;
-import dev.lightdev.listeners.PlayerInteractListener;
-import dev.lightdev.listeners.PlayerJoinListener;
-import dev.lightdev.listeners.PlayerQuitListener;
-import dev.lightdev.listeners.pvp.PlayerSwordInteract;
 import dev.lightdev.managers.ChatManager;
 import dev.lightdev.utils.string.ChatUtil;
 import dev.rollczi.litecommands.bukkit.LiteBukkitFactory;
@@ -36,24 +32,6 @@ public class LightService {
 
         // Implementation of core events in lobby:
 
-
-        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
-                new PlayerInteractListener(this.pluginConfig, this.menusConfig, this.messageConfig),
-                LightPlugin.getPlugin()
-        );
-        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
-                new PlayerJoinListener(this.pluginConfig,this.messageConfig),
-                LightPlugin.getPlugin()
-        );
-        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
-                new PlayerQuitListener(this.messageConfig),
-                LightPlugin.getPlugin()
-        );
-
-        LightPlugin.getPlugin().getServer().getPluginManager().registerEvents(
-                new PlayerSwordInteract(this.pluginConfig, this.messageConfig),
-                LightPlugin.getPlugin()
-        );
 
 
 
