@@ -21,7 +21,7 @@ public class SummonCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.admin")
+    @Permission("lightdev.core.admin")
     public void onUseSummon(@Context CommandSender commandSender, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

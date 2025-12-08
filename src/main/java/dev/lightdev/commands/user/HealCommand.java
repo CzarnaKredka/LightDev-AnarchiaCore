@@ -23,7 +23,7 @@ public class HealCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onHealOwn(@Context CommandSender commandSender) {
         if (commandSender instanceof Player player) {
 
@@ -40,7 +40,7 @@ public class HealCommand {
     }
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onHealOthers(@Context CommandSender commandSender, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

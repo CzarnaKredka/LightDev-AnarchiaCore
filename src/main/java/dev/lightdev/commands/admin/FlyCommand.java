@@ -21,7 +21,7 @@ public class FlyCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.admin")
+    @Permission("lightdev.core.admin")
     public void onFlyToggle(@Context CommandSender commandSender) {
         if (commandSender instanceof Player player) {
 
@@ -42,7 +42,7 @@ public class FlyCommand {
     }
 
     @Execute
-    @Permission("meteordev.core.admin")
+    @Permission("lightdev.core.admin")
     public void onFlyToggleOthers(@Context CommandSender commandSender, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

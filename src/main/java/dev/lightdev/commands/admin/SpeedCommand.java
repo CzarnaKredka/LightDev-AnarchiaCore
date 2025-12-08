@@ -23,7 +23,7 @@ public class SpeedCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.admin")
+    @Permission("lightdev.core.admin")
     public void onUseSpeed(@Context CommandSender commandSender, @Arg("amount") int speed) {
 
         if (commandSender instanceof Player player) {
@@ -43,7 +43,7 @@ public class SpeedCommand {
     }
 
     @Execute
-    @Permission("meteordev.core.admin")
+    @Permission("lightdev.core.admin")
     public void onUseSpeedOthers(@Context CommandSender commandSender, @Arg("amount") int speed, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

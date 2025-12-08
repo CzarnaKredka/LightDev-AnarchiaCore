@@ -25,7 +25,7 @@ public class GammaCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onGammaUse(@Context CommandSender commandSender) {
         if (commandSender instanceof Player player) {
 
@@ -45,7 +45,7 @@ public class GammaCommand {
     }
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onGammaUseOthers(@Context CommandSender commandSender, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

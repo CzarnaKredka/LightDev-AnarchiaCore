@@ -4,10 +4,7 @@ import dev.lightdev.commands.admin.*;
 import dev.lightdev.commands.handlers.InvalidCooldownHandler;
 import dev.lightdev.commands.handlers.InvalidPermissionHandler;
 import dev.lightdev.commands.handlers.InvalidUsageCmdHandler;
-import dev.lightdev.commands.user.FeedCommand;
-import dev.lightdev.commands.user.GammaCommand;
-import dev.lightdev.commands.user.HealCommand;
-import dev.lightdev.commands.user.WorkBenchCommand;
+import dev.lightdev.commands.user.*;
 import dev.lightdev.config.MenusConfig;
 import dev.lightdev.config.MessageConfig;
 import dev.lightdev.config.PluginConfig;
@@ -71,7 +68,11 @@ public class LightService {
                         new FeedCommand(this.messageConfig),
                         new GammaCommand(this.messageConfig),
                         new HealCommand(this.messageConfig),
-                        new WorkBenchCommand()
+                        new WorkBenchCommand(),
+                        new HelpopCommand(messageConfig),
+                        new DiscordCommand(messageConfig),
+                        new StoreCommand(messageConfig),
+                        new RepairCommand(messageConfig)
                 )
                 .missingPermission(new InvalidPermissionHandler())
                 .invalidUsage(new InvalidUsageCmdHandler())

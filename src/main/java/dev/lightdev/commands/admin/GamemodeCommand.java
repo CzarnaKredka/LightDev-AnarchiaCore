@@ -24,31 +24,31 @@ public class GamemodeCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.admin.gamemode.all")
+    @Permission("lightdev.core.admin.gamemode.all")
     public void onGamemodeOwn(@Context CommandSender commandSender, @Arg("gamemode") GameMode gameMode) {
             this.playerRunnable(commandSender, () -> this.changeGamemodeMethod((Player) commandSender, gameMode));
     }
 
     @Execute(name = "survival", aliases = "0")
-    @Permission("meteordev.core.admin.gamemode.survival")
+    @Permission("lightdev.core.admin.gamemode.survival")
     public void changeGamemodeToSurvival(@Context CommandSender commandSender) {
         this.playerRunnable(commandSender, () -> this.changeGamemodeMethod((Player) commandSender, GameMode.SURVIVAL));
     }
 
     @Execute(name = "creative", aliases = "1")
-    @Permission("meteordev.core.admin.gamemode.creative")
+    @Permission("lightdev.core.admin.gamemode.creative")
     public void changeGamemodeToCreative(@Context CommandSender commandSender) {
         this.playerRunnable(commandSender, () -> this.changeGamemodeMethod((Player) commandSender, GameMode.CREATIVE));
     }
 
     @Execute(name = "adventure", aliases = "2")
-    @Permission("meteordev.core.admin.gamemode.adventure")
+    @Permission("lightdev.core.admin.gamemode.adventure")
     public void changeGamemodeToAdventure(@Context CommandSender commandSender) {
         this.playerRunnable(commandSender, () -> this.changeGamemodeMethod((Player) commandSender, GameMode.ADVENTURE));
     }
 
     @Execute(name = "spectator", aliases = "3")
-    @Permission("meteordev.core.admin.gamemode.spectator")
+    @Permission("lightdev.core.admin.gamemode.spectator")
     public void changeGamemodeToSpectator(@Context CommandSender commandSender) {
         this.playerRunnable(commandSender, () -> this.changeGamemodeMethod((Player) commandSender, GameMode.SPECTATOR));
     }

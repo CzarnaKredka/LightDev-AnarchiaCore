@@ -23,7 +23,7 @@ public class FeedCommand {
     private final MessageConfig messageConfig;
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onFeedOwn(@Context CommandSender commandSender) {
         if (commandSender instanceof Player player) {
 
@@ -39,7 +39,7 @@ public class FeedCommand {
     }
 
     @Execute
-    @Permission("meteordev.core.user")
+    @Permission("lightdev.core.user")
     public void onFeedOthers(@Context CommandSender commandSender, @Arg("player") Player target) {
         if (commandSender instanceof Player player) {
 

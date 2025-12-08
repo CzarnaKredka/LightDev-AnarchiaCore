@@ -31,7 +31,7 @@ public class AdminChatCommand {
             Map<String, Object> placeholders = Map.of("MESSAGE", message, "PLAYER", player.getName());
 
             for (Player online : Bukkit.getOnlinePlayers()) {
-                if (online.hasPermission("meteordev.core.admin.notify") || online.isOp()) {
+                if (online.hasPermission("lightdev.core.admin.notify") || online.isOp()) {
 
                     this.messageConfig.onAdminChatMessage.send(online, placeholders);
 

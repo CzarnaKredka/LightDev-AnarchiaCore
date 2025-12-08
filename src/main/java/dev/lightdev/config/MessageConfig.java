@@ -83,4 +83,24 @@ public class MessageConfig extends OkaeriConfig {
     @Comment("Wiadomość po zabiciu gracza:")
     public Message onKillPlayer = new Message(MessageType.TITLE_SUBTITLE, "&#FFAE42&lᴍ&#FEB84E&lᴇ&#FCC15A&lᴛ&#FBCB66&lᴇ&#F9D472&lᴏ&#F8DE7E&lʀ&f&lᴅᴇᴠ%NOWA_LINIA%&8∙ &7Wydropiłeś &fczaszkę &7z gracza &f{PLAYER}&7! &8∙");
 
+    @Comment
+    @Comment("Wiadomość po wpisaniu /repair opocjonalnie /repair all")
+    public Message repairItem = new Message(MessageType.TITLE_SUBTITLE, "%NOWA_LINIA% &8∙ &aPomyślnie naprawiłeś &2przedmiot! &8∙");
+    public Message repairNoItem = new Message(MessageType.TITLE_SUBTITLE, "%NOWA_LINIA% &8∙ &cNie masz przedmiotu w &4ręce! &8∙");
+    public Message repairItemNotRepair = new Message(MessageType.TITLE_SUBTITLE, "%NOWA_LINIA% &8∙ &cTen przedmiot nie jest do &4naprawy! &8∙");
+
+    public Message repairAllNoItemRepair = new Message(MessageType.TITLE_SUBTITLE, "%NOWA_LINIA% &8∙ &cNie znaleziono &4żadnych &cprzedmiotów do naprawy! &8∙");
+    public Message repairAllSucces = new Message(MessageType.TITLE_SUBTITLE, "%NOWA_LINIA% &8∙ &aPomyślnie naprawiłeś &2{COUNT} &aprzedmiotów! &8∙");
+    @Comment
+    @Comment("Wiadomość po wyświetlania helpop:")
+    public Message helpopAdminMessage = new Message(MessageType.CHAT, "&8[&6❄&8] &7Gracz &f{PLAYER} &7napisał: &#ffae42{MESSAGE}");
+    public Message helpopUserMessage = new Message(MessageType.CHAT, "&8[&6❄&8] &aPomyślnie wysłałeś wiadomość do administracji o treści: &#ffae42{MESSAGE}");
+
+    @Comment
+    @Comment("Wiadomość po wpisaniu /discord")
+    public Message discordSend = new Message(MessageType.CHAT, "\n &8→ &fNasz discord: &#ffae42dc.lightdev.pl \n");
+
+    @Comment
+    @Comment("Wiadomość po wpisaniu /strona,/store")
+    public Message storeSend = new Message(MessageType.CHAT, "\n &8→ &fNasza strona: &#ffae42www.lightdev.pl \n");
 }
